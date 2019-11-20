@@ -6,3 +6,59 @@
     object-fit: cover;
   }
 }
+
+.home-cards {
+  margin-top: 30px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-gap: 10px;
+  padding: 10px;
+  a {
+    text-decoration: none;
+  }
+}
+.home-card {
+  width: 100%;
+  height: 400px;
+  background-size: cover;
+  background-position: center;
+  p {
+    color: transparent;
+  }
+
+  img {
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
+  }
+
+
+  &:hover {
+
+   p {
+    color: white;
+    text-decoration: none;
+    padding: 10px 20px;
+    border: 2px solid white;
+    font-weight: bold;
+    border-radius: 6px;
+    text-shadow: 1px 1px 3px rgba(0,0,0,0.2);
+    &:hover {
+      font-weight: bold;
+    }
+  }
+
+}
+
+}
+
+@media(max-width: 575px){
+  .home-cards {
+  margin-top: 30px;
+  display: grid;
+  grid-template-columns: 1fr ;
+  grid-gap: 10px;
+  padding: 10px;
+
+}
+}
