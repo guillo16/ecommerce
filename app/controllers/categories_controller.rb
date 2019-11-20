@@ -32,7 +32,7 @@ class CategoriesController < ApplicationController
   private
 
   def category_params
-    params.require(:category).permit(:name, :photo)
+    params.require(:category).permit(:name, :photo, :photo_card)
   end
 
   def set_category

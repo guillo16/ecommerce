@@ -1,7 +1,18 @@
 <div class="product-card">
   <%= link_to product_path(product)  do %>
-
   <img src="<%= product.image %>" alt="">
   <h2><%= product.name %></h2>
+  <div class="stars text-center">
+    <i class="fas fa-star"></i>
+    <i class="fas fa-star"></i>
+    <i class="fas fa-star"></i>
+    <i class="fas fa-star"></i>
+    <i class="fas fa-star"></i>
+  </div>
+  <div class="bottom-card text-center">
+    <p><%= product.description %></p>
+    <h3>179 EUR</h3>
+  </div>
+    <p class="text-center">CLASSICS</p>
   <% end %>
 </div>

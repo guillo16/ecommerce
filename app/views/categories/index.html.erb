@@ -1,45 +1,43 @@
 <div class="home-banner" style="background-image: linear-gradient(rgba(0,0,0,0.2),rgba(0,0,0,0.2)), url(https://prime-skiing.de/wp-content/uploads/2016/01/Douchebags_Travel-1.jpg);">
-  <div class="home-banner-button">
-  </div>
 </div>
 <%= render "shared/navbar" %>
-
 <div class="home-cards">
   <% @categories.last(4).each do |category| %>
   <%= link_to category_path(category) do  %>
-  <div class="home-card d-flex justify-content-center align-items-center" style="background-image: linear-gradient(rgba(0,0,0,0.2),rgba(0,0,0,0.2)), url(<%= category.photo %>);">
+  <div class="home-card d-flex justify-content-center align-items-center" style="background-image: linear-gradient(rgba(0,0,0,0.2),rgba(0,0,0,0.2)), url(<%= category.photo_card %>);">
     <p> <%= category.name %></p>
   </div>
   <% end %>
   <% end %>
 </div>
+<div class="product-title">
+  <h2> The best Sellers</h2>
+  <h3>Trusted by creatives, world travelers and urban city explorers. Meet the new kids in town!</h3>
+</div>
+<div class="product-cards">
+  <% @products.last(4).each do |product| %>
+  <%= render 'shared/cards', product: product %>
+  <% end %>
+</div>
 
 
 
 
 
 
-<% @products.each do |product| %>
-<%= product.name %>
-<% end %>
-
-adipisicing elit. Soluta tempore praesentium maiores reprehenderit eaque vel illo quidem totam corporis, iure laboriosam, unde numquam beatae perspiciatis laborum nostrum itaque eos id.</p>
-<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Soluta tempore praesentium maiores reprehenderit eaque vel illo quidem totam corporis, iure laboriosam, unde numquam beatae perspiciatis laborum nostrum itaque eos id.</p>
-<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Soluta tempore praesentium maiores reprehenderit eaque vel illo quidem totam corporis, iure laboriosam, unde numquam beatae perspiciatis laborum nostrum itaque eos id.</p>
-<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Soluta tempore praesentium maiores reprehenderit eaque vel illo quidem totam corporis, iure laboriosam, unde numquam beatae perspiciatis laborum nostrum itaque eos id.</p><p>Lorem ipsum dolor sit amet, consectetur
-  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Soluta tempore praesentium maiores reprehenderit eaque vel illo quidem totam corporis, iure laboriosam, unde numquam beatae perspiciatis laborum nostrum itaque eos id.</p><p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Soluta tempore praesentium maiores reprehenderit eaque vel illo quidem totam corporis, iure laboriosam, unde numquam beatae perspiciatis laborum nostrum itaque eos id.</p><p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Soluta tempore praesentium maiores reprehenderit eaque vel illo quidem totam corporis, iure laboriosam, unde numquam beatae perspiciatis laborum nostrum itaque eos id.</p><p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Soluta tempore praesentium maiores reprehenderit eaque vel illo quidem totam corporis, iure laboriosam, unde numquam beatae perspiciatis laborum nostrum itaque eos id.</p><p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Soluta tempore praesentium maiores reprehenderit eaque vel illo quidem totam corporis, iure laboriosam, unde numquam beatae perspiciatis laborum nostrum itaque eos id.</p>vv<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Soluta tempore praesentium maiores reprehenderit eaque vel illo quidem totam corporis, iure laboriosam, unde numquam beatae perspiciatis laborum nostrum itaque eos id.</p><p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Soluta tempore praesentium maiores reprehenderit eaque vel illo quidem totam corporis, iure laboriosam, unde numquam beatae perspiciatis laborum nostrum itaque eos id.</p>v
 
 
 
-  <script>
-    window.onscroll = function() {myFunction()};
-    var navbar = document.getElementById("navbar");
-    var sticky = navbar.offsetTop;
-    function myFunction() {
-      if (window.pageYOffset >= sticky) {
-        navbar.classList.add("sticky")
-      } else {
-        navbar.classList.remove("sticky");
-      }
+
+<script>
+  window.onscroll = function() {myFunction()};
+  var navbar = document.getElementById("navbar");
+  var sticky = navbar.offsetTop;
+  function myFunction() {
+    if (window.pageYOffset >= sticky) {
+      navbar.classList.add("sticky")
+    } else {
+      navbar.classList.remove("sticky");
     }
-  </script>
+  }
+</script>
