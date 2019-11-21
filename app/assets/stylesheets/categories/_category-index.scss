@@ -9,6 +9,7 @@
     font-size: 30px;
     font-weight: bold;
     color: $black;
+    margin-bottom: 0px;
   }
 
   p {
@@ -24,11 +25,13 @@
 .products-footer {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
-  grid-gap:8px;
+  grid-gap: 12px;
+  width: 90%;
+  margin: 0 auto;
 }
 
 
-@media(max-width: 575px) {
+@media(max-width: 600px) {
   .product-title {
     h2 {
       font-size: 20px;
