@@ -11,7 +11,7 @@
   <% end %>
 </div>
 <div class="product-title">
-  <h2> The best Sellers</h2>
+  <h2>The Bestsellers</h2>
   <p>-----</p>
   <h3>Trusted by creatives, world travelers and urban city explorers. Meet the new kids in town!</h3>
 </div>
@@ -20,9 +20,15 @@
   <%= render 'shared/cards', product: product %>
   <% end %>
 </div>
-
-
-
+<div class="products-footer">
+  <% @categories.first(3).each do |category| %>
+  <%= link_to category_path(category) do  %>
+  <div class="product-card-footer d-flex justify-content-center align-items-center" style="background-image: linear-gradient(rgba(0,0,0,0.2),rgba(0,0,0,0.2)), url(<%= category.photo_card %>);">
+    <p> <%= category.name %></p>
+  </div>
+  <% end %>
+  <% end %>
+</div>
 
 
 
