@@ -1,0 +1,51 @@
+<div class="home-banner" style="background-image: linear-gradient(rgba(0,0,0,0.2),rgba(0,0,0,0.2)), url(https://prime-skiing.de/wp-content/uploads/2016/01/Douchebags_Travel-1.jpg);">
+</div>
+<%= render "shared/navbar" %>
+<div class="home-cards">
+  <% @categories.last(4).each do |category| %>
+  <%= link_to category_path(category) do  %>
+  <div class="home-card d-flex justify-content-center align-items-center" style="background-image: linear-gradient(rgba(0,0,0,0.2),rgba(0,0,0,0.2)), url(<%= category.photo_card %>);">
+    <p> <%= category.name %></p>
+  </div>
+  <% end %>
+  <% end %>
+</div>
+<div class="product-title">
+  <h2>The Bestsellers</h2>
+  <p>-----</p>
+  <h3>Trusted by creatives, world travelers and urban city explorers. Meet the new kids in town!</h3>
+</div>
+<div class="product-cards">
+  <% @products.last(4).each do |product| %>
+  <%= render 'shared/cards', product: product %>
+  <% end %>
+</div>
+<div class="products-footer">
+  <% @categories.first(3).each do |category| %>
+  <div class="product-card-footer d-flex justify-content-center align-items-center" style="background-image: linear-gradient(rgba(0,0,0,0.2),rgba(0,0,0,0.2)), url(<%= category.photo_card %>);">
+    <div class="text-center">
+      <h2><%= category.name %></h2>
+      <h3><%= link_to "EXPLORE", category_path(category), class:"btn-landing" %></h3>
+    </div>
+  </div>
+  <% end %>
+</div>
+
+
+
+
+
+
+
+<script>
+  window.onscroll = function() {myFunction()};
+  var navbar = document.getElementById("navbar");
+  var sticky = navbar.offsetTop;
+  function myFunction() {
+    if (window.pageYOffset >= sticky) {
+      navbar.classList.add("sticky")
+    } else {
+      navbar.classList.remove("sticky");
+    }
+  }
+</script>

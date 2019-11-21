@@ -1,0 +1,171 @@
+.product-cards {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-gap: 16px;
+  padding: 16px;
+  width: 90%;
+  margin: 0 auto;
+  margin-bottom: 60px;
+
+}
+.product-card {
+  height: 500px;
+  a {
+    text-decoration: none;
+  }
+  img {
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
+    background-color: lightgrey;
+    padding: 30px;
+  }
+
+  h2 {
+    color: rgb(74, 73, 74);
+    font-size: 16px;
+    font-weight: bold;
+    text-align: center;
+    margin-bottom: 15px;
+    margin-top: 15px;
+
+  }
+
+  p {
+    color: rgb(74, 73, 74);
+    font-size: 11px;
+  }
+}
+
+.stars {
+  i {
+    color: yellow;
+  }
+}
+
+.bottom-card {
+  margin-top: 20px;
+  p {
+    margin-bottom: 0px;
+    color: rgb(74, 73, 74);
+    font-size: 11px;
+  }
+
+  h3 {
+    color: rgb(74, 73, 74);
+    font-size: 18px;
+    font-weight: bold;
+    padding-bottom: 10px;
+    margin-top: 0.3em;
+    margin-left: 20px;
+    margin-right: 20px;
+    border-bottom: 1px solid lightgrey;
+  }
+}
+
+
+
+
+
+
+.home-cards {
+  margin-top: 30px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-gap: 10px;
+  padding: 10px;
+  margin-bottom: 50px;
+  a {
+    text-decoration: none;
+  }
+}
+.home-card {
+  width: 100%;
+  height: 400px;
+  background-size: cover;
+  background-position: center;
+  p {
+    color: transparent;
+  }
+
+  img {
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
+  }
+
+
+  &:hover {
+
+   p {
+    color: white;
+    text-decoration: none;
+    padding: 10px 20px;
+    border: 2px solid white;
+    font-weight: bold;
+    border-radius: 6px;
+    text-shadow: 1px 1px 3px rgba(0,0,0,0.2);
+    &:hover {
+      font-weight: bold;
+    }
+  }
+
+}
+
+}
+
+.product-card-footer {
+  width: 100%;
+  height: 300px;
+  background-size: cover;
+  background-position: center;
+
+  h2 {
+   color: white;
+   font-size: 30px;
+   font-weight: bold;
+  }
+
+  a {
+    color: white;
+    text-decoration: none;
+    padding: 10px 20px;
+    border: 1px solid white;
+    font-size: 12px;
+
+  }
+}
+
+
+@media(max-width: 970px) {
+  .product-cards {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+
+  }
+}
+
+
+
+@media(max-width: 600px){
+  .product-cards {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 8px;
+    padding: 8px;
+  }
+  .home-cards {
+    margin-top: 30px;
+    display: grid;
+    grid-template-columns: 1fr ;
+    grid-gap: 10px;
+    padding: 10px;
+
+  }
+
+  .product-card-footer {
+    h2 {
+      font-size: 20px;
+    }
+  }
+}
