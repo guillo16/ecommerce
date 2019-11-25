@@ -1,3 +1,4 @@
+//top section (carousel and price bottom)
 .product-show-wrapper {
   margin-bottom: 60px;
 }
@@ -37,16 +38,13 @@
     margin: 20px auto;
     line-height: 25px;
     color: $black;
-
   }
-//under the price div
-h4 {
- font-size: 11px;
- color: lightgrey;
-
+  //under the price div
+  h4 {
+    font-size: 11px;
+    color: lightgrey;
+  }
 }
-}
-
 .product-show-buttons {
   width: 90%;
   margin: 0 auto;
@@ -62,12 +60,32 @@ h4 {
     }
   }
 }
-
 .product-show-price {
   margin-bottom: 40px;
   p {
     border: none;
   }
+}
+//medium part of the page (under the stars)
+.product-description {
+  text-align: center;
+  width: 60%;
+  margin: 0 auto;
+  margin-bottom: 80px;
+  h2 {
+    font-size: 30px;
+    font-weight: bold;
+    color: $black;
+
+  }
+
+  h3 {
+    font-size: 16px;
+    color: $black;
+    margin-bottom: 30px;
+
+  }
+
 }
 
 .product-images {
@@ -91,31 +109,9 @@ h4 {
   }
 }
 
-.product-description {
-  text-align: center;
-  width: 60%;
-  margin: 0 auto;
-  margin-bottom: 80px;
-  h2 {
-    font-size: 30px;
-    font-weight: bold;
-    color: $black;
 
-  }
-
-  h3 {
-    font-size: 16px;
-    color: $black;
-    margin-bottom: 30px;
-
-  }
-
-}
-
-
-
+//responsiveness
 @media(max-width: 992px) {
-
   .product-show-description {
     padding: 30px 15px;
     width: 100%;
@@ -129,15 +125,12 @@ h4 {
       padding: 0px 80px;
     }
   }
-
-
   .product-images {
     img {
       width: 100%;
       padding: 100px;
     }
   }
-
   .product-description {
     text-align: center;
     width: 90%;
@@ -145,17 +138,12 @@ h4 {
 
     h2 {
       font-size: 20px;
-
     }
-
     h3 {
       font-size: 14px;
       line-height: 25px;
       margin-bottom: 20px;
-
-
     }
-
   }
   .product-show-buttons {
     width: 90%;
@@ -174,5 +162,10 @@ h4 {
   }
 }
 
-
-
+@media(max-width: 575px) {
+  .product-show-description {
+    h3 {
+      padding: 10px;
+    }
+  }
+}
