@@ -18,12 +18,12 @@
     height: 300px;
     object-fit: cover;
     background-color: lightgrey;
-    padding: 30px;
+    padding: 12px;
   }
 
   h2 {
     color: rgb(74, 73, 74);
-    font-size: 16px;
+    font-size: 23px;
     font-weight: bold;
     text-align: center;
     margin-bottom: 15px;
@@ -39,7 +39,7 @@
 
 .stars {
   i {
-    color: yellow;
+    color: #f7be16;
   }
 }
 
@@ -153,6 +153,17 @@
     grid-template-columns: 1fr 1fr;
     grid-gap: 8px;
     padding: 8px;
+    img {
+      height: 230px;
+    }
+
+    h2 {
+      font-size: 16px;
+    }
+
+    p {
+      font-size: 11px;
+    }
   }
   .home-cards {
     margin-top: 30px;

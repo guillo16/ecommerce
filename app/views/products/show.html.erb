@@ -1,2 +1,93 @@
 <h1>Products#show</h1>
 <p>Find me in app/views/products/show.html.erb</p>
+<section class="top-product">
+  <div class="product-show-wrapper d-block d-lg-flex">
+    <div class="carousel-product" style="width: 100%;">
+     <%= render 'components/carousel' %>
+    </div>
+    <div class="product-show-description">
+      <h2><%= @product.name %></h2>
+      <p><%= @product.description %></p>
+      <img src="<%= @product.image %>" alt="">
+      <h3>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quasi quae quas aliquid, iure perspiciatis labore sint eius ullam illum similique asperiores dolores tempore vel inventore voluptates hic repellat rem voluptatem.</h3>
+      <div class="product-show-buttons">
+        <%= render 'components/modal' %>
+      </div>
+      <div class="product-show-price d-flex justify-content-around">
+        <div>
+          <p>175 EUR</p>
+        </div>
+        <button class="btn btn-primary"> Add To Cart</button>
+      </div>
+      <h4>Discounts can be added during checkout</h4>
+      <div class="stars text-center">
+        <i class="fas fa-star"></i>
+        <i class="fas fa-star"></i>
+        <i class="fas fa-star"></i>
+        <i class="fas fa-star"></i>
+        <i class="fas fa-star"></i>
+        355 reviews
+      </div>
+    </div>
+  </div>
+</section>
+<section class="medium-product">
+  <div class="product-description">
+    <h2>The ultimate daily backpack</h2>
+    <p>---</p>
+    <h3><strong>What do you get when you combine the functionality of the multi-purpose Hugger with the smart and clean Scholar?</strong></h3>
+    <h3>If you ask us you get the best of both worlds, and our test patrol have already called it the ultimate daily backpack. It has everything you need both in style and practicality, whether you're going on adventure out in the wild, stomping the city pavements or just on campus/at work.</h3>
+  </div>
+  <div class="product-images">
+    <div class="d-block d-md-flex align-items-center">
+      <img src="<%= @product.image %>" alt="">
+      <div class="product-images-description text-center">
+        <h2>LAPTOP POCKET</h2>
+        <h4 style="color:lightgrey;">---</h4>
+        <p>Easy access to a separate and padded laptop pocket protects and allows for quick and easy handling through airport security. Fits a 15" MacBook Pro with ease</p>
+      </div>
+    </div>
+    <div class="d-block d-md-flex flex-row-reverse align-items-center">
+      <img src="<%= @product.image %>" alt="">
+      <div class="product-images-description text-center">
+        <h2>HOOK-UP SYSTEM</h2>
+        <h4 style="color:lightgrey;">---</h4>
+        <p>The patented Hook-Up system allows weight to be lifted off human shoulders and placed over wheels instead. The Backpack can easily be hooked up to all of our roller bags.</p>
+      </div>
+    </div>
+    <div class="d-block d-md-flex align-items-center">
+      <img src="<%= @product.image %>" alt="">
+      <div class="product-images-description text-center">
+        <h2>TOP POCKET</h2>
+        <h4 style="color:lightgrey;">---</h4>
+        <p>Roomy top pocket gives quick access to your essentials.</p>
+      </div>
+    </div>
+  </div>
+</section>
+<section class="bottom-product">
+  <div class="home-end">
+    <div class="boxes">
+      <h2><i class="fas fa-credit-card"></i> Payment</h2>
+      <p>Pay with VISA, MasterCard, or PayPal in our secure checkout.</p>
+    </div>
+    <div class="boxes">
+      <h2><i class="fas fa-box-open"></i> Shipping & Returns</h2>
+      <p>Free shipping on all orders over 150€/1500 kr. Free returns. Return within 60 days and get your money back.</p>
+    </div>
+    <div class="boxes">
+      <h2><i class="fas fa-file-signature"></i> Extended Warranty</h2>
+      <p>Two years warranty on all of our bags. We promise that they will last.
+      </p>
+    </div>
+  </div>
+</section>
+
+
+
+
+
+
+
+
+

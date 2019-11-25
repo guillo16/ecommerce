@@ -1,0 +1,55 @@
+.categories-filter {
+  width: 90%;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+.category-navbar {
+  p {
+    color: grey;
+    margin-bottom: 0px;
+  }
+
+  button {
+    border-color: rgb(0, 89, 175);
+    background-color: white;
+    padding: 10px 20px;
+    color: rgb(0, 89, 175);
+
+  }
+}
+
+//Box of payments and shipping
+.home-end {
+  width: 90%;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-gap: 16px;
+  padding: 16px;
+
+}
+
+.boxes {
+  background-color: white;
+  padding: 30px;
+  margin-bottom: 15px;
+  text-align: center;
+  color: grey;
+  h2 {
+    font-weight: bold;
+    font-size: 18px;
+  }
+
+  p {
+    font-size: 14px;
+  }
+}
+
+
+
+@media(max-width: 992px) {
+  .home-end {
+    display: block;
+  }
+}
