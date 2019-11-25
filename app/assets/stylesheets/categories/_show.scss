@@ -4,6 +4,20 @@
   padding: 20px;
 }
 
+.category-navbar {
+  p {
+    color: grey;
+    margin-bottom: 0px;
+  }
+
+  button {
+    border-color: rgb(0, 89, 175);
+    background-color: white;
+    padding: 10px 20px;
+    color: rgb(0, 89, 175);
+
+  }
+}
 
 //Box of payments and shipping
 .home-end {

@@ -3,7 +3,14 @@
     <h1><%= @category.name %></h1>
   </div>
 </div>
+
+
 <div class="categories-filter">
+  <div class="category-navbar d-flex justify-content-between align-items-center">
+    <p><%= @category.products.count %> results</p>
+    <button> + Open Filter</button>
+  </div>
+
   <% @categories.each do |category| %>
   <%= link_to category_path(category)  do%>
   <%= category.name %>
