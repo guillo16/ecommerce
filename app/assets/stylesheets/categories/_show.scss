@@ -3,3 +3,39 @@
   margin: 0 auto;
   padding: 20px;
 }
+
+
+//Box of payments and shipping
+.home-end {
+  width: 90%;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-gap: 16px;
+  padding: 16px;
+
+}
+
+.boxes {
+  background-color: white;
+  padding: 30px;
+  margin-bottom: 15px;
+  text-align: center;
+  color: grey;
+  h2 {
+    font-weight: bold;
+    font-size: 18px;
+  }
+
+  p {
+    font-size: 14px;
+  }
+}
+
+
+
+@media(max-width: 675px) {
+  .home-end {
+    display: block;
+  }
+}
