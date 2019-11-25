@@ -3,14 +3,11 @@
     <h1><%= @category.name %></h1>
   </div>
 </div>
-
-
 <div class="categories-filter">
   <div class="category-navbar d-flex justify-content-between align-items-center">
     <p><%= @category.products.count %> results</p>
     <button> + Open Filter</button>
   </div>
-
   <% @categories.each do |category| %>
   <%= link_to category_path(category)  do%>
   <%= category.name %>
@@ -22,7 +19,6 @@
   <%= render 'shared/cards', product: product %>
   <% end %>
 </div>
-
 <div class="home-end">
   <div class="boxes">
     <h2><i class="fas fa-credit-card"></i> Payment</h2>
@@ -38,16 +34,6 @@
     </p>
   </div>
 </div>
-
-
-
-
-
-
-
-
-
-
 <div class="d-none">
   <%= render 'products/form', category: @category, product: @product %>
 </div>
