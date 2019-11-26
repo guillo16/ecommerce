@@ -13,11 +13,13 @@
       <div class="product-show-buttons">
         <%= render 'components/modal' %>
       </div>
-      <div class="product-show-price d-flex justify-content-around">
+      <div class="product-show-price d-flex justify-content-around p-5">
         <div>
-          <p>175 EUR</p>
+          <p>175EUR</p>
         </div>
-        <button class="btn btn-primary"> Add To Cart</button>
+        <div>
+          <button class="btn btn-primary"> Add To Cart</button>
+        </div>
       </div>
       <h4>Discounts can be added during checkout</h4>
       <div class="stars text-center">
@@ -66,19 +68,5 @@
   </div>
 </section>
 <section class="bottom-product">
-  <div class="home-end">
-    <div class="boxes">
-      <h2><i class="fas fa-credit-card"></i> Payment</h2>
-      <p>Pay with VISA, MasterCard, or PayPal in our secure checkout.</p>
-    </div>
-    <div class="boxes">
-      <h2><i class="fas fa-box-open"></i> Shipping & Returns</h2>
-      <p>Free shipping on all orders over 150€/1500 kr. Free returns. Return within 60 days and get your money back.</p>
-    </div>
-    <div class="boxes">
-      <h2><i class="fas fa-file-signature"></i> Extended Warranty</h2>
-      <p>Two years warranty on all of our bags. We promise that they will last.
-      </p>
-    </div>
-  </div>
+ <%= render 'components/boxes' %>
 </section>
