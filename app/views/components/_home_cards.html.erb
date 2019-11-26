@@ -1,0 +1,44 @@
+<div class="column">
+  <% @categories.where(name: "Backpacks").last(1).each do |category| %>
+  <%= link_to category_path(category) do  %>
+  <div class="card-category-1" style="background-image: linear-gradient(rgba(0,0,0,0.1), rgba(0,0,0,0.1)), url(<%= category.photo %>)">
+    <div class="text-center">
+      <h2><%= category.name %></h2>
+      <button class="home-button">Shop Now</button>
+    </div>
+  </div>
+  <% end %>
+  <% end %>
+  <% @categories.where(name: "Bike").last(1).each do |category| %>
+  <%= link_to category_path(category) do  %>
+  <div class="card-category-2" style="background-image: linear-gradient(rgba(0,0,0,0.1), rgba(0,0,0,0.1)), url(<%= category.photo %>)">
+    <div class="text-center">
+      <h2><%= category.name %></h2>
+      <button class="home-button">Shop Now</button>
+    </div>
+  </div>
+  <% end %>
+  <% end %>
+</div>
+<div class="column">
+  <% @categories.where(name: "Jay Alvarrez").last(1).each do |category| %>
+  <%= link_to category_path(category) do  %>
+  <div class="card-category-2" style="background-image: linear-gradient(rgba(0,0,0,0.1), rgba(0,0,0,0.1)), url(<%= category.photo %>)">
+    <div class="text-center">
+      <h2><%= category.name %></h2>
+      <button class="home-button">Shop Now</button>
+    </div>
+  </div>
+  <% end %>
+  <% end %>
+  <% @categories.where(name: "Luggage").last(1).each do |category| %>
+  <%= link_to category_path(category) do  %>
+  <div class="card-category-1" style="background-image: linear-gradient(rgba(0,0,0,0.1), rgba(0,0,0,0.1)), url(<%= category.photo %>)">
+    <div class="text-center">
+      <h2><%= category.name %></h2>
+      <button class="home-button">Shop Now</button>
+    </div>
+  </div>
+  <% end %>
+  <% end %>
+</div>
