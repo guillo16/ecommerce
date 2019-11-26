@@ -1,3 +1,6 @@
+body {
+  background: white;
+}
 .categories-filter {
   width: 90%;
   margin: 0 auto;
@@ -31,11 +34,12 @@
 }
 
 .boxes {
-  background-color: white;
+  background-color: rgba(245, 245, 245, 0.9);
   padding: 30px;
   margin-bottom: 15px;
   text-align: center;
   color: grey;
+
   h2 {
     font-weight: bold;
     font-size: 18px;
