@@ -3,34 +3,34 @@
   <div class="product-show-wrapper d-block d-lg-flex">
     <div class="carousel-product" style="width: 100%;">
      <%= render 'components/carousel' %>
+   </div>
+   <div class="product-show-description">
+    <h2><%= @product.name %></h2>
+    <p><%= @product.description %></p>
+    <img src="<%= @product.image %>" alt="">
+    <h3>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quasi quae quas aliquid, iure perspiciatis labore sint eius ullam illum similique asperiores dolores tempore vel inventore voluptates hic repellat rem voluptatem.</h3>
+    <div class="product-show-buttons">
+      <%= render 'components/modal' %>
     </div>
-    <div class="product-show-description">
-      <h2><%= @product.name %></h2>
-      <p><%= @product.description %></p>
-      <img src="<%= @product.image %>" alt="">
-      <h3>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quasi quae quas aliquid, iure perspiciatis labore sint eius ullam illum similique asperiores dolores tempore vel inventore voluptates hic repellat rem voluptatem.</h3>
-      <div class="product-show-buttons">
-        <%= render 'components/modal' %>
+    <div class="product-show-price d-flex justify-content-around p-5">
+      <div>
+        <p>175EUR</p>
       </div>
-      <div class="product-show-price d-flex justify-content-around p-5">
-        <div>
-          <p>175EUR</p>
-        </div>
-        <div>
-          <button class="btn btn-primary"> Add To Cart</button>
-        </div>
+      <div>
+        <button class="btn btn-primary"> Add To Cart</button>
       </div>
-      <h4>Discounts can be added during checkout</h4>
-      <div class="stars text-center">
-        <i class="fas fa-star"></i>
-        <i class="fas fa-star"></i>
-        <i class="fas fa-star"></i>
-        <i class="fas fa-star"></i>
-        <i class="fas fa-star"></i>
-        355 reviews
-      </div>
+    </div>
+    <h4>Discounts can be added during checkout</h4>
+    <div class="stars text-center">
+      <i class="fas fa-star"></i>
+      <i class="fas fa-star"></i>
+      <i class="fas fa-star"></i>
+      <i class="fas fa-star"></i>
+      <i class="fas fa-star"></i>
+      355 reviews
     </div>
   </div>
+</div>
 </section>
 <section class="medium-product">
   <div class="product-description">
@@ -68,4 +68,7 @@
 </section>
 <section class="bottom-product">
  <%= render 'components/boxes' %>
+</section>
+<section id="new-reviews">
+  <%= render 'shared/reviews' %>
 </section>
