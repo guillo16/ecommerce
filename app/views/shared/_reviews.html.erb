@@ -1,22 +1,27 @@
-<div class="count-review">
+<div class="review-container">
+  <div class="count-review">
     <h1>Reviews</h1>
-    <h3> <% @product.average.times do %>
-      <i class="fas fa-star"></i>
-      <% end %>
-      <% (5 - @product.average).times do %>
-      <i class="far fa-star"></i>
-      <% end %>(<span id="review-count"><%=@product.reviews.size%></span>)</h3>
-      <p><button id="myReviewButton" onClick="myReviewFunction();" ><i class="fas fa-edit"></i> Write a review</button></p>
-
-      <% if user_signed_in? %>
-      <div style= "display:none;" id="reviewForm">
-        <%= render 'reviews/form', product: @product, review: @review %>
-        <% else %>
-        <p>You must be log in to create a review for <%= @product.name %></p>
-        <%end  %>
-      </div>
-      <br>
+    <h4>Powered by <i class="fab fa-apple"></i></h4>
+    <div class="review-count-star">
+      <h2><%= @product.average %></h2>
+      <h3><% @product.average.times do %>
+        <i class="fas fa-star"></i>
+        <% end %>
+        <% (5 - @product.average).times do %>
+        <i class="far fa-star"></i>
+        <% end %></h3>
+        <p><span id="review-count"><%=@product.reviews.size%></span> Reviews</p>
     </div>
+    <h5><button id="myReviewButton" onClick="myReviewFunction();" ><i class="fas fa-edit"></i> Write a review</button></h5>
+    <% if user_signed_in? %>
+    <div style= "display:none;" id="reviewForm">
+      <%= render 'reviews/form', product: @product, review: @review %>
+      <% else %>
+      <p>You must be log in to create a review for <%= @product.name %></p>
+      <%end  %>
+    </div>
+    <br>
+  </div>
     <div id="reviews">
       <% if @product.reviews.blank? %>
       <% else %>
@@ -25,12 +30,11 @@
       <% end %>
       <% end %>
     </div>
-  </div>
 
-
-<script>
-  function myReviewFunction() {
-   var x = document.getElementById("reviewForm");
-   x.style.display = "block";
- }
-</script>
+    <script>
+      function myReviewFunction() {
+       var x = document.getElementById("reviewForm");
+       x.style.display = "block";
+     }
+   </script>
+</div>
