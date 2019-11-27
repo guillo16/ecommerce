@@ -1,3 +1,59 @@
+//first part of the page
+
+.home-cards {
+  width: 90%;
+  margin: 0 auto;
+  margin-top: 60px;
+  display: flex;
+  flex-wrap: wrap;
+  padding: 0 4px;
+  a {
+    text-decoration: none;
+  }
+}
+
+/* Create two equal columns that sits next to each other */
+.column {
+  flex: 50%;
+  padding: 0 10px;
+}
+
+.card-category-1 {
+  background-size: cover;
+  background-position: center;
+  height: 500px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 20px;
+  h2 {
+    color: white;
+    font-size: 24px;
+    font-weight: bold;
+    text-shadow: 1px 1px 3px rgba(0,0,0,0.2);
+    text-decoration: none;
+  }
+}
+
+.card-category-2 {
+  background-size: cover;
+  background-position: center;
+  height: 300px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 20px;
+  h2 {
+    color: white;
+    font-size: 24px;
+    font-weight: bold;
+    text-shadow: 1px 1px 3px rgba(0,0,0,0.2);
+    text-decoration: none;
+  }
+}
+
+
+
 .product-title {
   text-align: center;
 
@@ -30,8 +86,32 @@
   margin: 0 auto;
 }
 
+.home-button {
+  background: transparent;
+  color: white;
+  text-decoration: none;
+  padding: 10px 20px;
+  border: 1px solid white;
+  font-size: 16px;
+}
+
+
+.home-title {
+  text-align: center;
+  h2 {
+    font-size: 30px;
+    color: $black;
+  }
+  p {
+    color: lightgray;
+  }
+}
 
 @media(max-width: 600px) {
+  .home-cards {
+    display: block;
+  }
+
   .product-title {
     h2 {
       font-size: 20px;
