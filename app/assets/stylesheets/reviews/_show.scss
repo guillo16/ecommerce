@@ -1,3 +1,4 @@
+//top part of the reviews
 .count-review {
   width: 90%;
   margin: 0 auto;
@@ -9,7 +10,6 @@
     padding-bottom: 50px;
     border-bottom: 1px solid lightgrey;
   }
-
   h4 {
     color: $black;
     font-size: 16px;
@@ -28,7 +28,6 @@
     background: transparent;
   }
 }
-
 .review-count-star {
   display: flex;
   align-items: center;
@@ -38,27 +37,92 @@
     font-weight: bold;
     color: grey;
   }
-
   h3 {
     padding: 0 10px;
     color: #f7be16;
     font-size: 20px;
     margin-bottom: 0px;
   }
-
   p {
     font-size: 15px;
     color: grey;
     margin-bottom: 0px;
   }
 }
-
+//second part of the reviews page under the review form
+.review-container {
+  width: 90%;
+  margin: 0 auto;
+}
+//top part of the reviews
+.review-created {
+  text-align: right;
+  margin-bottom: -30px;
+  color: grey;
+  font-size: 12px;
+}
+.review-wrapper {
+ display: flex;
+ align-items: center;
+}
+//circle around the letter
+.review-avatar {
+  padding: 10px;
+  margin-right: 5px;
+  background-color: grey;
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+  p {
+   text-align: center;
+   font-size: 20px;
+   font-style: bold;
+   text-transform: uppercase;
+   color: white;
+ }
+}
+.review-title {
+  h3 {
+   font-size: 12px;
+   font-weight: bold;
+   color: $black;
+   margin-bottom: 1px;
+ }
+ i {
+  color: #f7be16;
+}
+}
+//bottom part of reviews
+.review-content {
+  color: grey;
+  padding-bottom: 10px;
+  border-bottom: 1px solid grey;
+  margin-bottom: 30px;
+  h2 {
+    font-size: 14px;
+    padding-left: 55px;
+    padding-bottom: 10px;
+  }
+  p {
+    font-size: 13px;
+    color: grey;
+    padding-left: 55px;
+  }
+  i {
+    font-size: 13px;
+    color: grey;
+  }
+}
+@media(max-width: 975px){
+  .review-container {
+    width: 98%;
+    margin: 0 auto;
+  }
+}
 @media(max-width: 575px){
   .count-review {
-  h5 {
-    text-align: center;
+    h5 {
+      text-align: center;
+    }
   }
-
-}
-
 }
