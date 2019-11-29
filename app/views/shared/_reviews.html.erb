@@ -17,7 +17,7 @@
     <div style= "display:none;" id="reviewForm">
       <%= render 'reviews/form', product: @product, review: @review %>
       <% else %>
-      <p>You must be log in to create a review for <%= @product.name %></p>
+      <p>You must be <%= link_to "Login", new_user_session_path %> in to create a review for <%= @product.name %></p>
       <%end  %>
     </div>
     <br>
