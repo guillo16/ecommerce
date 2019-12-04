@@ -4,7 +4,16 @@
   <% end %>
 
   <div class="d-flex align-items-center d-sm-none">
-    1 <i class="fas fa-shopping-bag mr-3"></i>
+     <div class="cart-item">
+      <% if total_cart_items %>
+      <%= link_to cart_path(@cart), class: "nav-link" do %>
+      <span class="icon is-small">
+        <i class="fas fa-shopping-bag"></i>
+      </span>
+      <span><%= cart_count_over_one %></span>
+      <% end %>
+      <% end %>
+    </div>
     <button class="navbar-toggler d-sm-none" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
@@ -27,14 +36,30 @@
 
 
       <% else %>
-      <li class="nav-item">
-        <%= link_to "Login", new_user_session_path, class: "nav-link" %>
+
+      <li class="nav-item ">
+        <%= link_to "Shop", products_path, class: "nav-link" %>
+      </li>
+      <li class="nav-item ">
+        <%= link_to "Stories", "#", class: "nav-link" %>
+      </li>
+      <li class="nav-item ">
+        <%= link_to "About", "#", class: "nav-link" %>
       </li>
       <% end %>
     </ul>
   </div>
 
   <div class="d-none d-sm-block guillo">
-    1 <i class="fas fa-shopping-bag"></i>
+    <div class="cart-item">
+      <% if total_cart_items %>
+      <%= link_to cart_path(@cart), class: "nav-link" do %>
+      <span class="icon is-small">
+        <i class="fas fa-shopping-bag"></i>
+      </span>
+      <span><%= cart_count_over_one %></span>
+      <% end %>
+      <% end %>
+    </div>
   </div>
 </div>

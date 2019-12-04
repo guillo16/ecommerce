@@ -2,6 +2,9 @@ Rails.application.routes.draw do
   devise_for :users
   root to: 'categories#index'
 
+  resources :line_items
+  resources :carts
+
   resources :categories, only: [:show, :new, :create, :destroy] do
     resources :products, only: [:create]
   end
