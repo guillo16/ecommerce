@@ -14,7 +14,7 @@
     </div>
     <div class="product-show-price d-flex justify-content-around p-5">
       <div>
-        <p>175EUR</p>
+        <p><%= humanized_money(@product.price) %>EUR</p>
       </div>
       <div>
         <button class="btn btn-primary"> Add To Cart</button>

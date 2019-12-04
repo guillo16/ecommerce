@@ -11,7 +11,7 @@
   </div>
   <div class="bottom-card text-center">
     <p><%= product.description %></p>
-    <h3>179 EUR</h3>
+    <h3><%= humanized_money_with_symbol(product.price)  %>EUR</h3>
   </div>
     <p class="text-center">CLASSICS</p>
   <% end %>
