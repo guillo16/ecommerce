@@ -5,6 +5,8 @@ class Product < ApplicationRecord
   has_many :line_items
   validates :name, presence: true
   monetize :price_cents
+  before_destroy :not_referenced_by_any_line_item
+
 
   def average
     return self.reviews.map { |r| r.rating }.sum / self.reviews.count if self.reviews.count > 0
