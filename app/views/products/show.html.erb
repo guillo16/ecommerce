@@ -17,7 +17,7 @@
         <p><%= humanized_money(@product.price) %>EUR</p>
       </div>
       <div>
-        <button class="btn btn-primary"> Add To Cart</button>
+        <%= button_to 'Add to cart', line_items_path(product_id: @product), class: 'btn btn-primary' %>
       </div>
     </div>
     <h4>Discounts can be added during checkout</h4>
