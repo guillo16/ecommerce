@@ -1,21 +1,19 @@
 .cart-container {
-  width: 100%;
-  img {
-    width: 100px;
-    height: 100px;
-  }
+  width: 90%;
+  margin: 0 auto;
 }
-
-
+// shopping card tittle
 .keep-shopping {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 10px;
+  padding: 20px 0px;
+  border-bottom: 1px solid lightgrey;
+  margin-bottom: 20px;
   h2 {
     font-size: 16px;
     color: $black;
-    margin-left: 20px;
+    margin-left: 0px;
     margin-bottom: 0px;
   }
   i {
@@ -35,16 +33,19 @@
     font-size: 16px;
   }
 }
-
+//container of the line-items
+.cart-items {
+  margin-bottom: 100px;
+}
 
 .price {
   border-top: lightgrey solid 1px;
   color: $black;
-  padding: 10px;
+  padding: 10px 0px;
   padding-top: 20px;
   h2 {
     font-weight: bold;
-     font-size: 23px;
+    font-size: 23px;
   }
 
   h3 {
@@ -52,11 +53,9 @@
 
   }
 }
-
+// the subtotal and shipping
 .price-top {
   color: $black;
-  padding: 0px 10px;
-
   h3 {
     font-size: 14px;
     margin-bottom: 10px;
@@ -64,5 +63,15 @@
   p {
     font-size: 16px;
     margin-bottom: 10px;
+  }
+}
+
+//delete cart
+.delete-cart {
+  padding: 20px 0px;
+  text-align: right;
+  border-top: 1px solid lightgrey;
+  p {
+    margin-bottom: 0px;
   }
 }
